@@ -21,7 +21,7 @@ const Projects = () => {
           </div>
           <div className="flex flex-wrap -m-4">
             {projects.map((project, index) => (
-              <div className="xl:w-1/3 md:w-1/2 p-4 ">
+              <div key={index} className="xl:w-1/3 md:w-1/2 p-4 ">
                 <div className="bg-gray-100/50 p-6 h-[27rem] overflow-hidden rounded-lg group shadow-2xl">
                   <img
                     className="md:h-[20rem] h-40 rounded w-full object-cover object-center mb-6 group-hover:h-40 transition-all"
