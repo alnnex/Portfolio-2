@@ -70,7 +70,7 @@ const projects = [
     name: "CAS Department Portal",
     url: "https://cas-portal.vercel.app/",
     type: "Next JS",
-    pic: "/portal.png",
+    pic: "/portal.PNG",
   },
   {
     name: "CET Department Attendance System",
