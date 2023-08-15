@@ -1,6 +1,7 @@
 "use client";
 
 import AboutMe from "@/components/aboutMe/AboutMe";
+import Projects from "@/components/aboutMe/Projects";
 import Contact from "@/components/Contact";
 import Landing from "@/components/Landing";
 import Image from "next/image";
@@ -23,6 +24,13 @@ export default function Home() {
 
   const handleClickContact = () => {
     const element = document.getElementById("contact");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const handleClickProject = () => {
+    const element = document.getElementById("project");
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
@@ -70,6 +78,15 @@ export default function Home() {
           </li>
           <li
             className={`my-auto py-2 px-3 relative group hover:text-white transition-all cursor-pointer`}
+            onClick={handleClickProject}
+          >
+            <div className="absolute bg-accent transition-all w-1 h-full top-0 right-0 group-hover:w-full text-primary/0 -z-10">
+              l
+            </div>
+            Projects
+          </li>
+          <li
+            className={`my-auto py-2 px-3 relative group hover:text-white transition-all cursor-pointer`}
             onClick={handleClickContact}
           >
             <div className="absolute bg-accent transition-all w-1 h-full top-0 right-0 group-hover:w-full text-primary/0 -z-10">
@@ -85,6 +102,9 @@ export default function Home() {
         </div>
         <div id="about">
           <AboutMe />
+        </div>
+        <div id="project">
+          <Projects />
         </div>
         <div id="contact">
           <Contact />

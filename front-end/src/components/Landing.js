@@ -65,7 +65,7 @@ const Landing = () => {
         <div>
           <button
             type="button"
-            className="md:mt-16 md:justify-normal px-10 py-3 flex
+            className="md:mt-16 md:justify-normal px-10 py-3 flex  mx-auto md:mx-0
             lg:mt-16 focus:outline-none text-white bg-accent hover:bg-darkAccent hover:text-slate-900 transition-all focus:ring-4 focus:ring-secondary font-medium text-lg tracking-widest rounded-lg mb-2 "
           >
             CV/Resume
@@ -74,25 +74,7 @@ const Landing = () => {
             </span>
           </button>
         </div>
-        {/* <div
-          className="
-      flex justify-center gap-4
-      md:gap-6 md:mt-24 md:justify-normal
-      lg:mt-40  lg:gap-10
-    "
-        >
-          {icons.map((icon, index) => (
-            <a
-              href={icon.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              key={index}
-              className={`text-4xl md:text-5xl lg:text-6xl ${icon.color} transition-all`}
-            >
-              {icon.icon}
-            </a>
-          ))}
-        </div> */}
+       
         {/* <div
       className="
       flex gap-2 text-lg border w-fit mx-auto py-1 px-2 border-slate-400/50 rounded-sm shadow-lg animate-pulse cursor-pointer hover:scale-110 transition-all
@@ -111,13 +93,4 @@ const Landing = () => {
 
 export default Landing;
 
-const icons = [
-  {
-    icon: <AiFillFacebook />,
-    link: "https://www.facebook.com/alnek.mamen",
-    color: "hover:text-[#1877F2]",
-  },
-  { icon: <AiFillLinkedin />, link: "#", color: "hover:text-[#0077B5]" },
-  { icon: <AiOutlineWhatsApp />, link: "#", color: "hover:text-[#25D366]" },
-  { icon: <BiLogoGmail />, link: "#", color: "hover:text-[#c71610]" },
-];
+

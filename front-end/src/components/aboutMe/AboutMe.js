@@ -13,9 +13,7 @@ const AboutMe = () => {
       <div>
         <Skills />
       </div>
-      <div>
-        <Projects />
-      </div>
+    
     </div>
   );
 };

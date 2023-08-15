@@ -44,17 +44,17 @@ const Skills = () => {
 
                   <div className="leading-relaxed text-base">
                     <div>
-                      <div class="text-sm font-medium text-gray-500 dark:text-gray-400">
+                      <div className="text-sm font-medium text-gray-500 dark:text-gray-400">
                         Rate
                       </div>
-                      <div class="flex items-center mb-3 gap-5">
-                        {/* <div class="w-full bg-gray-200 rounded h-2.5 dark:bg-gray-700 mr-2">
+                      <div className="flex items-center mb-3 gap-5">
+                        {/* <div className="w-full bg-gray-200 rounded h-2.5 dark:bg-gray-700 mr-2">
                           <div
-                            class="bg-darkAccent h-2.5 rounded"
+                            className="bg-darkAccent h-2.5 rounded"
                             style={{ width: skill.rate }}
                           ></div>
                         </div>
-                        <span class="text-sm font-medium text-gray-500 dark:text-gray-400">
+                        <span className="text-sm font-medium text-gray-500 dark:text-gray-400">
                           {skill.rate}
                         </span> */}
                         {Array.from(Array(Math.floor(skill.star)), (e, i) => {
@@ -88,7 +88,7 @@ const Skills = () => {
                             );
                           }
                         )}
-                        <div>{skill.star}</div>
+                        {/* <div>{skill.star}</div> */}
                       </div>
                     </div>
                   </div>
@@ -105,17 +105,17 @@ const Skills = () => {
 export default Skills;
 
 const skills = [
-  { name: "HTML", icon: <AiFillHtml5 size={30} />, rate: "88%", star: 4.5 },
-  { name: "CSS", icon: <BiLogoCss3 size={30} />, rate: "20%", star: 2 },
+  { name: "HTML", icon: <AiFillHtml5 size={30} />, rate: "88%", star: 5 },
+  { name: "CSS", icon: <BiLogoCss3 size={30} />, rate: "20%", star: 3 },
   {
     name: "Javascript",
     icon: <BiLogoJavascript size={30} />,
     rate: "88%",
     star: 3,
   },
-  { name: "React JS", icon: <FaReact size={30} />, rate: "88%", star: 1 },
+  { name: "React JS", icon: <FaReact size={30} />, rate: "88%", star: 4 },
   { name: "Express JS", icon: <SiExpress size={30} />, rate: "88%", star: 3 },
-  { name: "Node JS", icon: <SiNodedotjs size={30} />, rate: "88%", star: 4 },
+  { name: "Node JS", icon: <SiNodedotjs size={30} />, rate: "88%", star: 3 },
   { name: "MongoDB", icon: <SiMongodb size={30} />, rate: "88%", star: 3 },
   {
     name: "Tailwind CSS",
@@ -123,7 +123,7 @@ const skills = [
     rate: "88%",
     star: 5,
   },
-  { name: "Chakra UI", icon: <SiChakraui size={30} />, rate: "88%", star: 2 },
-  { name: "Next JS", icon: <SiNextdotjs size={30} />, rate: "88%", star: 1 },
+  { name: "Chakra UI", icon: <SiChakraui size={30} />, rate: "88%", star: 5 },
+  { name: "Next JS", icon: <SiNextdotjs size={30} />, rate: "88%", star: 4 },
   { name: "C#", icon: <SiCsharp size={30} />, rate: "88%", star: 3 },
 ];
