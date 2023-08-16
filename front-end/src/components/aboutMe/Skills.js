@@ -33,7 +33,7 @@ const Skills = () => {
                 className="xl:w-1/4 w-full md:w-1/3 p-4 text-black md:hover:scale-110 transition-all"
               >
                 <div className="p-6 rounded-lg bg-gray-200/40 border border-secondary/40 shadow-lg group relative overflow-hidden">
-                  <div className="h-full bg-gradient-to-tr from-white/0 via-white/40 animate-pulse back w-0 transition-all group-hover:w-full to-white/0 absolute inset-0"></div>
+                  {/* <div className="h-full bg-gradient-to-tr from-white/0 via-white/40 animate-pulse back w-0 transition-all group-hover:w-full to-white/0 absolute inset-0"></div> */}
                   <div className="flex">
                     <div className="w-10 h-10 inline-flex items-center justify-center rounded-full pt-1 bg-indigo-100 text-primary mb-4 pb-[2.3px]">
                       {skill.icon}
@@ -62,7 +62,7 @@ const Skills = () => {
                           return (
                             <svg
                               key={i}
-                              className="w-8 h-8 text-yellow-500"
+                              className="w-8 h-8 text-yellow-500 group-hover:animate-pulse group-hover:scale-110 transition-all"
                               aria-hidden="true"
                               xmlns="http://www.w3.org/2000/svg"
                               fill="currentColor"

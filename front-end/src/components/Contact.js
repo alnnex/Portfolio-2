@@ -43,11 +43,14 @@ const Contact = () => {
             ))}
           </div>
           <div
-            className="w-fit flex mx-auto hover:border-b-2 border-slate-900 cursor-pointer"
+            className="w-fit flex mx-auto border-b-2 hover:border-slate-900 group/email border-transparent cursor-pointer relative"
             onClick={() => {
               navigator.clipboard.writeText("alnnexquiwagtrabs@gmail.com");
             }}
           >
+            <div className="absolute -top-6 left-0 hidden group-hover/email:inline-block">
+              Click to copy to clipboard.
+            </div>
             <text className="text-slate-900 text-xl">
               alnnexquiwagtrabs@gmail.com
             </text>
