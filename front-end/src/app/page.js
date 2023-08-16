@@ -54,47 +54,51 @@ export default function Home() {
           <Image alt="logo" width={100} height={100} src={"/logo.png"} />{" "}
           <text className="my-auto">AGQuwiag</text>
         </div>
-        <button className="my-auto md:hidden">
-          <GiHamburgerMenu size={25} />
-        </button>
-        <ul className={` gap-2 font-semibold hidden md:flex`}>
-          <li
-            className={`my-auto py-2 px-3 relative group hover:text-white transition-all cursor-pointer`}
-            onClick={handleClickHome}
+        <div className="relative group/menu">
+          <button className="md:hidden group-hover/menu:text-white transition-all">
+            <GiHamburgerMenu size={34} />
+          </button>
+          <ul
+            className={` gap-2 font-semibold hidden group-hover/menu:block md:group-hover/menu:flex  absolute bg-gray-100 md:bg-transparent -z-10 right-0 w-44 md:w-[22.9rem] md:flex`}
           >
-            <div className="absolute bg-accent transition-all w-1 h-full top-0 right-0 group-hover:w-full text-primary/0 -z-10">
-              l
-            </div>
-            Home
-          </li>
-          <li
-            className={`my-auto py-2 px-3 relative group hover:text-white transition-all cursor-pointer`}
-            onClick={handleClickAbout}
-          >
-            <div className="absolute bg-accent transition-all w-1 h-full top-0 right-0 group-hover:w-full text-primary/0 -z-10">
-              l
-            </div>
-            About Me
-          </li>
-          <li
-            className={`my-auto py-2 px-3 relative group hover:text-white transition-all cursor-pointer`}
-            onClick={handleClickProject}
-          >
-            <div className="absolute bg-accent transition-all w-1 h-full top-0 right-0 group-hover:w-full text-primary/0 -z-10">
-              l
-            </div>
-            Projects
-          </li>
-          <li
-            className={`my-auto py-2 px-3 relative group hover:text-white transition-all cursor-pointer`}
-            onClick={handleClickContact}
-          >
-            <div className="absolute bg-accent transition-all w-1 h-full top-0 right-0 group-hover:w-full text-primary/0 -z-10">
-              l
-            </div>
-            Contact
-          </li>
-        </ul>
+            <li
+              className={`my-auto py-2 px-3 relative group/item hover:text-white transition-all cursor-pointer`}
+              onClick={handleClickHome}
+            >
+              <div className="absolute bg-accent transition-all w-1 h-full top-0 right-0 group-hover/item:w-full text-primary/0 -z-[1]">
+                l
+              </div>
+              Home
+            </li>
+            <li
+              className={`my-auto py-2 px-3 relative group/item hover:text-white transition-all cursor-pointer`}
+              onClick={handleClickAbout}
+            >
+              <div className="absolute bg-accent transition-all w-1 h-full top-0 right-0 group-hover/item:w-full text-primary/0 -z-10">
+                l
+              </div>
+              About Me
+            </li>
+            <li
+              className={`my-auto py-2 px-3 relative group/item hover:text-white transition-all cursor-pointer`}
+              onClick={handleClickProject}
+            >
+              <div className="absolute bg-accent transition-all w-1 h-full top-0 right-0 group-hover/item:w-full text-primary/0 -z-10">
+                l
+              </div>
+              Projects
+            </li>
+            <li
+              className={`my-auto py-2 px-3 relative group/item hover:text-white transition-all cursor-pointer`}
+              onClick={handleClickContact}
+            >
+              <div className="absolute bg-accent transition-all w-1 h-full top-0 right-0 group-hover/item:w-full text-primary/0 -z-10">
+                l
+              </div>
+              Contact
+            </li>
+          </ul>
+        </div>
       </nav>
       <div className="backdrop-blur-2xl snap-y snap-mandatory">
         <div id="landing">

@@ -63,18 +63,24 @@ const Landing = () => {
           A Full-stack Web and Software Developer.
         </p>
         <div>
-          <button
-            type="button"
-            className="md:mt-16 md:justify-normal px-10 py-3 flex  mx-auto md:mx-0
-            lg:mt-16 focus:outline-none text-white bg-accent hover:bg-darkAccent hover:text-slate-900 transition-all focus:ring-4 focus:ring-secondary font-medium text-lg tracking-widest rounded-lg mb-2 "
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://drive.google.com/file/d/1g0EUoe4PI6CljU0Qa6TL5b1C0Q981Z2A/view?usp=sharing"
           >
-            CV/Resume
-            <span className="my-auto ml-3">
-              <AiOutlineDownload size={24}/>
-            </span>
-          </button>
+            <button
+              type="button"
+              className="md:mt-16 md:justify-normal px-10 py-3 flex  mx-auto md:mx-0
+            lg:mt-16 focus:outline-none text-white bg-accent hover:bg-darkAccent hover:text-slate-900 transition-all focus:ring-4 focus:ring-secondary font-medium text-lg tracking-widest rounded-lg mb-2 "
+            >
+              CV/Resume
+              <span className="my-auto ml-3">
+                <AiOutlineDownload size={24} />
+              </span>
+            </button>
+          </a>
         </div>
-       
+
         {/* <div
       className="
       flex gap-2 text-lg border w-fit mx-auto py-1 px-2 border-slate-400/50 rounded-sm shadow-lg animate-pulse cursor-pointer hover:scale-110 transition-all
@@ -92,5 +98,3 @@ const Landing = () => {
 };
 
 export default Landing;
-
-
