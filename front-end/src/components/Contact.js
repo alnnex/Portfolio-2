@@ -83,7 +83,15 @@ const icons = [
     link: "https://www.facebook.com/alnek.mamen",
     color: "hover:text-[#1877F2]",
   },
-  { icon: <AiFillLinkedin />, link: "#", color: "hover:text-[#0077B5]" },
-  { icon: <AiOutlineWhatsApp />, link: "#", color: "hover:text-[#25D366]" },
+  {
+    icon: <AiFillLinkedin />,
+    link: "https://www.linkedin.com/in/alnnex-quiwag-116b61288/",
+    color: "hover:text-[#0077B5]",
+  },
+  {
+    icon: <AiOutlineWhatsApp />,
+    link: "https://api.whatsapp.com/send?phone=639615771603",
+    color: "hover:text-[#25D366]",
+  },
   // { icon: <BiLogoGmail />, link: "#", color: "hover:text-[#c71610]" },
 ];
