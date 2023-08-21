@@ -9,15 +9,22 @@ import {
 } from "react-icons/ai";
 import { BiLogoGmail } from "react-icons/bi";
 
+import { motion } from "framer-motion";
+
 const Landing = () => {
   return (
     <div
       className="
     md:flex-row-reverse md:px-16
     lg:px-32
-    h-[100vh] pt-24 flex flex-col"
+    h-[100vh] pt-16 md:pt-24 flex flex-col"
     >
-      <div className="md:my-auto md:w-1/2">
+      <motion.div
+        initial={{ opacity: 0, x: 200 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ type: "spring", stiffness: 100, duration: 1, delay: 0.8 }}
+        className="md:my-auto md:w-1/2"
+      >
         <Image
           className="w-92 md:w-full mx-auto"
           width={500}
@@ -26,7 +33,7 @@ const Landing = () => {
           alt="self-portrait"
           priority
         />
-      </div>
+      </motion.div>
       <div
         className="
     flex flex-col gap-4 text-slate-800 text-center
@@ -62,7 +69,16 @@ const Landing = () => {
         >
           A Full-stack Web and Software Developer.
         </p>
-        <div>
+        <motion.div
+          initial={{ opacity: 0, x: 200 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{
+            type: "spring",
+            stiffness: 100,
+            duration: 1,
+            delay: 0.6,
+          }}
+        >
           <a
             target="_blank"
             rel="noopener noreferrer"
@@ -79,7 +95,7 @@ const Landing = () => {
               </span>
             </button>
           </a>
-        </div>
+        </motion.div>
 
         {/* <div
       className="

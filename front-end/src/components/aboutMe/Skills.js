@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { AiFillHtml5 } from "react-icons/ai";
 import { BiLogoCss3, BiLogoJavascript } from "react-icons/bi";
 import { FaReact } from "react-icons/fa";
@@ -113,6 +113,15 @@ export default Skills;
 const Section = ({ count, children }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
+  const [countDelay, setCountDelay] = useState(0.2);
+
+  useEffect(() => {
+    if (window.innerWidth > 768) {
+      return;
+    } else {
+      setCountDelay(0);
+    }
+  });
 
   return (
     <div
@@ -121,7 +130,7 @@ const Section = ({ count, children }) => {
         // transform: isInView ? "none" : "translateX(-200px)",
         // opacity: isInView ? 1 : 0,
         transition: `all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) ${
-          count * 0.2
+          count * countDelay
         }s`,
       }}
       className={`xl:w-1/4 w-full md:w-1/3 p-4 text-black ${

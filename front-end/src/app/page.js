@@ -41,7 +41,7 @@ export default function Home() {
   return (
     <div className="bg-[url('/bg.svg')]  bg-cover bg-fixed bg-right-top bg-no-repeat">
       <nav
-        className={`flex justify-between px-2 md:px-16 lg:px-32 py-4 backdrop-blur-sm max-w-[1535px] w-full fixed z-50`}
+        className={`flex justify-between px-2 md:px-16 lg:px-32 py-2 backdrop-blur-sm max-w-[1535px] w-full fixed z-50`}
       >
         <div
           id="logo"

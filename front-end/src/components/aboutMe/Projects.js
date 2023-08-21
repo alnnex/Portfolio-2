@@ -27,7 +27,7 @@ const Projects = () => {
                   <Image
                     width={600}
                     height={600}
-                    className="md:h-[22rem] h-40 rounded w-full border shadow-xl object-cover object-center mb-6 group-hover:h-40 transition-all"
+                    className="md:h-[22rem] h-40 rounded w-full border shadow-xl object-cover object-center duration-500 mb-6 group-hover:h-40 transition-all"
                     src={project.pic}
                     alt="content"
                   />
