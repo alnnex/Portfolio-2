@@ -71,7 +71,7 @@ const Landing = () => {
             <button
               type="button"
               className="md:mt-16 md:justify-normal px-10 py-3 flex  mx-auto md:mx-0
-            lg:mt-16 focus:outline-none text-white bg-accent hover:bg-darkAccent hover:text-slate-900 transition-all focus:ring-4 focus:ring-secondary font-medium text-lg tracking-widest rounded-lg mb-2 "
+            lg:mt-16 focus:outline-none text-white bg-accent hover:scale-110 transition-all focus:ring-4 focus:ring-secondary font-medium text-lg tracking-widest rounded-lg mb-2 "
             >
               CV/Resume
               <span className="my-auto ml-3">

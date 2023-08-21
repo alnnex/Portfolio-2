@@ -6,6 +6,8 @@ import Contact from "@/components/Contact";
 import Landing from "@/components/Landing";
 import Image from "next/image";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { motion, AnimatePresence } from "framer-motion";
+import React from "react";
 
 export default function Home() {
   const handleClickHome = () => {
@@ -100,20 +102,28 @@ export default function Home() {
           </ul>
         </div>
       </nav>
-      <div className="backdrop-blur-2xl snap-y snap-mandatory">
-        <div id="landing">
-          <Landing />
-        </div>
-        <div id="about">
-          <AboutMe />
-        </div>
-        <div id="project">
-          <Projects />
-        </div>
-        <div id="contact">
-          <Contact />
-        </div>
+      <div className="backdrop-blur-2xl snap-y snap-mandatory overflow-x-hidden">
+        <motion.div
+          initial={{ opacity: 0, x: 200 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ type: "spring", stiffness: 100, duration: 1 }}
+          // key={page.id}
+          // id={page.id}
+        >
+          {pages.map((page) => (
+            <span key={page.id} id={page.id}>
+              {page.component}
+            </span>
+          ))}
+        </motion.div>
       </div>
     </div>
   );
 }
+
+const pages = [
+  { component: <Landing />, id: "landing" },
+  { component: <AboutMe />, id: "about" },
+  { component: <Projects />, id: "project" },
+  { component: <Contact />, id: "contact" },
+];
