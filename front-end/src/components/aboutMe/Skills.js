@@ -29,25 +29,8 @@ const Skills = () => {
           </div>
           <div className="flex flex-wrap -m-4 ">
             {skills.map((skill, index) => {
-              const ref = useRef(null);
-              const isInView = useInView(ref, { once: true });
               return (
-                <div
-                  ref={ref}
-                  key={index}
-                  style={{
-                    // transform: isInView ? "none" : "translateX(-200px)",
-                    // opacity: isInView ? 1 : 0,
-                    transition: `all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) ${
-                      index * 0.2
-                    }s`,
-                  }}
-                  className={`xl:w-1/4 w-full md:w-1/3 p-4 text-black ${
-                    isInView
-                      ? "none opacity-100"
-                      : "translate-x-[200px] opacity-0"
-                  }`}
-                >
+                <Section count={index}>
                   <div className="p-6 rounded-lg bg-gray-200/40 border border-secondary/40 shadow-lg group relative overflow-hidden">
                     {/* <div className="h-full bg-gradient-to-tr from-white/0 via-white/40 animate-pulse back w-0 transition-all group-hover:w-full to-white/0 absolute inset-0"></div> */}
                     <div className="flex">
@@ -110,7 +93,7 @@ const Skills = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </Section>
               );
             })}
           </div>
@@ -121,6 +104,30 @@ const Skills = () => {
 };
 
 export default Skills;
+
+const Section = ({count, children }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  return (
+    <div
+      ref={ref}
+      key={count}
+      style={{
+        // transform: isInView ? "none" : "translateX(-200px)",
+        // opacity: isInView ? 1 : 0,
+        transition: `all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) ${
+          count * 0.2
+        }s`,
+      }}
+      className={`xl:w-1/4 w-full md:w-1/3 p-4 text-black ${
+        isInView ? "none opacity-100" : "translate-x-[200px] opacity-0"
+      }`}
+    >
+      {children}
+    </div>
+  );
+};
 
 const skills = [
   { name: "HTML", icon: <AiFillHtml5 size={30} />, rate: "88%", star: 5 },
