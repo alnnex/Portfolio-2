@@ -1,13 +1,27 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useRef } from "react";
+
+import { useInView } from "framer-motion";
 
 const Projects = () => {
+  const titleRef = useRef(null);
+  const projectsRef = useRef(null);
+  const titleIsInView = useInView(titleRef, { once: true });
+  const projectsIsInView = useInView(projectsRef, { once: true });
+
   return (
     <div>
       <section className="text-gray-600 body-font">
         <div className="container px-5 py-24 mx-auto">
-          <div className="flex flex-wrap w-full mb-20">
+          <div
+            ref={titleRef}
+            className={`delay-400 duration-500 transition-all flex flex-wrap w-full mb-20 ${
+              titleIsInView ? "opacity-100" : "translate-x-[200px] opacity-0 "
+            }`}
+          >
             <div className="lg:w-1/2 w-full mb-6 lg:mb-0">
               <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">
                 Projects
@@ -20,7 +34,14 @@ const Projects = () => {
               entire coding career.
             </p>
           </div>
-          <div className="flex flex-wrap -m-4">
+          <div
+            ref={projectsRef}
+            className={`delay-400 duration-500 transition-all flex flex-wrap -m-4 ${
+              projectsIsInView
+                ? "opacity-100"
+                : "translate-y-[200px] opacity-0 "
+            }`}
+          >
             {projects.map((project, index) => (
               <div key={index} className="xl:w-1/3 md:w-1/2 p-4 ">
                 <div className="bg-gray-100/50 p-6 md:h-[29rem] h-full overflow-hidden rounded-lg group shadow-2xl">
