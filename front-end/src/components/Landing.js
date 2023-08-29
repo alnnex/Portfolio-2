@@ -20,7 +20,7 @@ const Landing = () => {
     h-[100vh] pt-16 md:pt-24 flex flex-col"
     >
       <motion.div
-        initial={{ opacity: 0, x: 200 }}
+        initial={{ opacity: 0, x: -200 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ type: "spring", stiffness: 100, duration: 1, delay: 0.8 }}
         className="md:my-auto md:w-1/2"
@@ -70,7 +70,7 @@ const Landing = () => {
           A Full-stack Web and Software Developer.
         </p>
         <motion.div
-          initial={{ opacity: 0, x: 200 }}
+          initial={{ opacity: 0, x: -200 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{
             type: "spring",

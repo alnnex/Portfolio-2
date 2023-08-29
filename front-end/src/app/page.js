@@ -104,7 +104,7 @@ export default function Home() {
       </nav>
       <div className="backdrop-blur-2xl snap-y snap-mandatory overflow-x-hidden">
         <motion.div
-          initial={{ opacity: 0, x: 200 }}
+          initial={{ opacity: 0, x: -200 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ type: "spring", stiffness: 100, duration: 1 }}
           // key={page.id}

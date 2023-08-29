@@ -44,11 +44,11 @@ const Projects = () => {
           >
             {projects.map((project, index) => (
               <div key={index} className="xl:w-1/3 md:w-1/2 p-4 ">
-                <div className="bg-gray-100/50 p-6 md:h-[29rem] h-full overflow-hidden rounded-lg group shadow-2xl">
+                <div className="bg-gray-100/50 p-6 md:h-[512px] h-full overflow-hidden rounded-lg group shadow-2xl">
                   <Image
                     width={600}
                     height={600}
-                    className="md:h-[22rem] h-40 rounded w-full border shadow-xl object-cover object-center duration-500 mb-6 group-hover:h-40 transition-all"
+                    className="md:h-[400px] h-40 rounded w-full border shadow-xl object-cover object-center duration-500 mb-6 group-hover:h-40 transition-all"
                     src={project.pic}
                     alt="content"
                   />
@@ -64,10 +64,47 @@ const Projects = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <div className="bg-accent text-white px-2 py-3 w-full mt-8 text-center">
+                    <div
+                      className={`bg-accent text-white px-2 py-3 w-full text-center ${
+                        !project.gitRepoFront & !project.gitRepoBack
+                          ? "mt-20"
+                          : "mt-7"
+                      }`}
+                    >
                       View Project
                     </div>
-                  </a>
+                  </a>{" "}
+                  <div className="flex w-full gap-3">
+                    <p
+                      className={`${
+                        !project.gitRepoBack & !project.gitRepoFront && "hidden"
+                      } my-auto`}
+                    >
+                      Source Code:
+                    </p>
+                    <a
+                      href={project.gitRepoFront}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`w-full ${!project.gitRepoFront && "hidden"}`}
+                    >
+                      <div
+                        className={`border-accent border text-accent  px-2 py-3  mt-2 text-center `}
+                      >
+                        Front-End
+                      </div>
+                    </a>
+                    <a
+                      href={project.gitRepoBack}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`w-full ${!project.gitRepoBack && "hidden"}`}
+                    >
+                      <div className="border-accent border text-accent px-2 py-3 mt-2 text-center">
+                        Back-End
+                      </div>
+                    </a>
+                  </div>
                 </div>
               </div>
             ))}
@@ -87,6 +124,8 @@ const projects = [
     type: "React JS",
     pic: "/ekonsulta.png",
     desc: "A fully working chatting platform for consultation which uses ReactJS, ChakraUI, ExpressJS, and MongoDB.",
+    gitRepoFront: "https://github.com/alnnex/front-end",
+    gitRepoBack: "https://github.com/alnnex/backend_ekonsulta",
   },
   {
     name: "CAS Department Portal",
@@ -94,6 +133,8 @@ const projects = [
     type: "Next JS",
     pic: "/portal.PNG",
     desc: "A portal website with content manager for the admin users. Uses NextJS, ChakraUI, ExpressJS, and MongoDB",
+    gitRepoFront: "https://github.com/alnnex/portalWebsite",
+    gitRepoBack: "https://github.com/alnnex/back",
   },
   {
     name: "CET Department Attendance System",
@@ -101,6 +142,8 @@ const projects = [
     type: "C#",
     pic: "/attendance.PNG",
     desc: "An attendance system that automatically calculates total fines for every students. Uses C# and MsAccess.",
+    gitRepoFront: "",
+    gitRepoBack: "",
   },
   {
     name: "UB-Plaza",
@@ -108,5 +151,7 @@ const projects = [
     type: "React JS",
     pic: "/ubplaza.png",
     desc: "A partially working front-end of an online store for school merchandise. Uses NextJS and ChakraUI.",
+    gitRepoFront: "https://github.com/alnnex/front-end",
+    gitRepoBack: "",
   },
 ];
