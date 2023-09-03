@@ -152,7 +152,7 @@ const skills = [
     rate: "88%",
     star: 3,
   },
-  { name: "React JS", icon: <FaReact size={30} />, rate: "88%", star: 4 },
+  { name: "React JS", icon: <FaReact size={30} />, rate: "88%", star: 5 },
   { name: "Express JS", icon: <SiExpress size={30} />, rate: "88%", star: 3 },
   { name: "Node JS", icon: <SiNodedotjs size={30} />, rate: "88%", star: 3 },
   { name: "MongoDB", icon: <SiMongodb size={30} />, rate: "88%", star: 3 },
@@ -163,7 +163,7 @@ const skills = [
     star: 5,
   },
   { name: "Chakra UI", icon: <SiChakraui size={30} />, rate: "88%", star: 5 },
-  { name: "Next JS", icon: <SiNextdotjs size={30} />, rate: "88%", star: 4 },
+  { name: "Next JS", icon: <SiNextdotjs size={30} />, rate: "88%", star: 5 },
   { name: "C#", icon: <SiCsharp size={30} />, rate: "88%", star: 3 },
   { name: "MySQL", icon: <SiMysql size={30} />, rate: "88%", star: 4 },
 ];
