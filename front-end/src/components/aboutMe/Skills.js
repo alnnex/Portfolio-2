@@ -7,6 +7,7 @@ import {
   SiCsharp,
   SiExpress,
   SiMongodb,
+  SiMysql,
   SiNextdotjs,
   SiNodedotjs,
   SiTailwindcss,
@@ -164,4 +165,5 @@ const skills = [
   { name: "Chakra UI", icon: <SiChakraui size={30} />, rate: "88%", star: 5 },
   { name: "Next JS", icon: <SiNextdotjs size={30} />, rate: "88%", star: 4 },
   { name: "C#", icon: <SiCsharp size={30} />, rate: "88%", star: 3 },
+  { name: "MySQL", icon: <SiMysql size={30} />, rate: "88%", star: 4 },
 ];
