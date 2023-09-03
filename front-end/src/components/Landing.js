@@ -82,7 +82,7 @@ const Landing = () => {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://drive.google.com/file/d/1np2a_qtHlwQuJuJo2feKkW4NBarOoKeP/view?usp=sharing"
+            href="https://drive.google.com/file/d/1Xw43Q5FPAgflHEkr5exH66rxO8E2EXf4/view?usp=sharing"
           >
             <button
               type="button"
